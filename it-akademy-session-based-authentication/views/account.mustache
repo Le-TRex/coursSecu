@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <h1>My account</h1>
+
+    <p>You are connected as {{ user.username }} since {{ duration }} seconds</p>
+
+    <a href='/logout'>Logout</a>
+    <div>
+      <p>Your id is {{ user.id }}</p>
+      <p>Your email is {{ user.email }}</p>
+      <p>You logged in {{ user.connexions }} times</p>
+    </div>
+  </body>
+</html>

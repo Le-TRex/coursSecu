@@ -1,0 +1,10 @@
+stages:
+  - test
+
+jest:
+  stage: test
+  image: node:fermium-alpine
+  script:
+    - npm install
+    - ./node_modules/jest/bin/jest.js
+  coverage: /All\sfiles.*?\s+(\d+.\d+)/

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <h1>Petition</h1>
+    <p>This is a petition, enter your name to sign it.</p>
+    <form action="/sign" method="POST">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" value="John Doe"><br>
+      <div class="g-recaptcha" data-sitekey={{ siteKey }}></div>
+      <input type="submit" value="Submit">
+    </form>
+    <h2>Signers</h2>
+    <ul>
+      {{#signers}}
+        <li>{{{.}}}</li>
+      {{/signers}}
+    </ul>
+  </body>
+</html>
